@@ -25,3 +25,10 @@ def ask_ok(prompt, retries=10, complaint='输入0或者no，停止记录数值')
         print(complaint)
         
 ask_ok('开始记录数据，输入yes停止记录?')
+
+def big_n(x):
+    for i in range(x):
+        print(i)
+        return
+
+print(big_n(10))
