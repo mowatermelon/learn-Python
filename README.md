@@ -6,11 +6,11 @@
 
 ## 1.1 [注释](https://github.com/mowatermelon/learn-Python/blob/master/chapter_1/note.py)
 
-## 1.2 [输出语句](https://github.com/mowatermelon/learn-Python/blob/master/chapter_1/print.py)
+## 1.2 输出语句
 
-### 1.2.1 基础
+### 1.2.1 [基础](https://github.com/mowatermelon/learn-Python/blob/master/chapter_1/print_1.py)
 
-### 1.2.2 格式化输出
+### 1.2.2 [格式化输出](https://github.com/mowatermelon/learn-Python/blob/master/chapter_1/print_2.py)
 
 ## 1.3 输入语句
 
