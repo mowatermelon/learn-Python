@@ -13,6 +13,13 @@ print("利用 % 格式打印字符串 --------------------------------")
 strHello = "the length of (%s) is %d" %('Hello Watermelon',len('Hello Watermelon'))
 print(strHello) # the length of (Hello Watermelon) is 16
 
+strHello = "Hello Watermelon"
+print(strHello) # Hello Watermelon
+print ("%.*s" % (4,strHello)) # Hell
+print ("%.3s " % (strHello)) # Hel
+# print ("%.*S" % (4,strHello)) # ValueError: unsupported format character 'S' (0x53)
+# print ("%.3S " % (strHello)) # ValueError: unsupported format character 'S' (0x53)
+print ("%s" % ("Hello Watermelon")) # Hello Watermelon
 print('\n')
 print('\n')
 
@@ -443,5 +450,105 @@ print('16进制的0xff转成浮点型的{:.3f}'.format(0xff)) # 16进制的0xff�
 print('\n')
 print('\n')
 #------------------------------------------------------------------------------------------------格式化打印数字Number end
+
+#------------------------------------------------------------------------------------------------格式化打印错误集合 start
+print('格式化打印错误集合 start ------------------------------------------------------------------------------------------------')
+
+print("逗号错误 --------------------------------")
+# 请注意`左参数`和`右参数`之间不存在逗号，如果写了逗号，会报错。
+
+# print("%s,%s", % ("hello","watermelon"))
+# SyntaxError: invalid syntax
+
+print("进制转换错误 --------------------------------")
+
+print("\t\t\t\t数据类型必须是小写字母")
+# `八进制类型`，`十进制类型`和`字符串类型`的缩写必须是`小写字母`，换成`大写字母`会报错。
+
+# print ("%O " % ("Hello Watermelon"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    print ("%O " % ("Hello Watermelon"))
+ValueError: unsupported format character 'O' (0x4f) at index 1
+'''
+
+# print ("%D " % ("Hello Watermelon"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    print ("%D " % ("Hello Watermelon"))
+ValueError: unsupported format character 'D' (0x44) at index 1
+'''
+
+# print ("%S " % ("Hello Watermelon"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#14>", line 1, in <module>
+    print ("%S " % ("Hello Watermelon"))
+ValueError: unsupported format character 'S' (0x53) at index 1
+'''
+
+print("\t\t\t\t数据类型必须是数字类型")
+# 做`类型转换`的时候，`浮点类型`和`十进制类型`需要传入的参数必要是`数字类型`的。
+# print ("%d " % ("Hello Watermelon"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    print ("%d " % ("Hello Watermelon"))
+TypeError: %d format: a number is required, not str
+'''
+
+# print ("%F " % ("Hello Watermelon"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    print ("%F " % ("Hello Watermelon"))
+TypeError: must be real number, not str
+'''
+
+
+print("\t\t\t\t数据类型必须是整型")
+# 做`类型转换`的时候，`十六进制类型`和`八进制类型`需要传入的参数必要是`整型`。
+# print ("%X " % ("Hello Watermelon"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    print ("%X " % ("Hello Watermelon"))
+TypeError: %X format: an integer is required, not str
+'''
+
+# print ("%o " % ("Hello Watermelon"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#16>", line 1, in <module>
+    print ("%o " % ("Hello Watermelon"))
+TypeError: %o format: an integer is required, not str
+'''
+
+
+print("参数个数错误 --------------------------------")
+# `左参数`的`个数`和`右参数`的`个数`一定要相等。
+# print ("%s,%s" % ("Hello","Watermelon","!"))
+'''
+Traceback (most recent call last):
+  File "<pyshell#29>", line 1, in <module>
+    print ("%s,%s" % ("Hello","Watermelon","!"))
+TypeError: not all arguments converted during string formatting
+'''
+
+#------------------------------------------------------------------------------------------------格式化打印错误集合 end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
