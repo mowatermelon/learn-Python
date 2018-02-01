@@ -112,7 +112,7 @@ class SVM(object):
         return np.sign(self.project(X))
 
 if __name__ == "__main__":
-    import matplotlib.pylab as pl
+    import pylab as pl
 
     def gen_lin_separable_data():
         # generate training data in the 2-d case
